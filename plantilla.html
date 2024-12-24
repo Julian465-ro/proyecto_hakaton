@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iniciar sesión</title>
+    <link href="style.css" rel="stylesheet"s
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h2>Iniciar sesión</h2>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="correo" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                </form>
+                {% if mensaje %}
+                <div class="alert alert-{{ tipo_mensaje }}">{{ mensaje }}</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

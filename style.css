@@ -1,0 +1,117 @@
+/* Estilo general para el body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Contenedor principal */
+.login-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    width: 350px;
+    text-align: center;
+    color: #333;
+}
+
+/* Título del formulario */
+.form-login h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Grupos de entrada */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Entradas (input) */
+.input-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border 0.3s;
+    background: #f9f9f9;
+}
+
+.input-group input:focus {
+    border: 1px solid #4CAF50;
+    background: #eafaf1;
+}
+
+/* Texto animado de 'label' */
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 16px;
+    color: #aaa;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Cuando el input tiene contenido o está activo */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: #4CAF50;
+    background: #ffffff;
+    padding: 0 5px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+/* Botón de inicio de sesión */
+.btn-login {
+    background: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-login:hover {
+    background: #45A049;
+    transform: scale(1.02);
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+/* Enlace al registro */
+.register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

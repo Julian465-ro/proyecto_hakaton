@@ -1,0 +1,36 @@
+!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar referidos</title>
+    <link href="style.css" rel="stylesheet"
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h2>Buscar referidos</h2>
+                <form action="{{ url_for('buscar_referidos') }}" method="post">
+                    <div class="form-group">
+                        <label for="nombre_o_correo">Nombre o correo electrónico:</label>
+                        <input type="text" class="form-control" id="nombre_o_correo" name="nombre_o_correo" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </form>
+                {% if referidos %}
+                <h3>Resultados de la búsqueda:</h3>
+                <ul>
+                    {% for referido in referidos %}
+                    <li>{{ referido.nombre }} - {{ referido.correo }} - {{ referido.telefono }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

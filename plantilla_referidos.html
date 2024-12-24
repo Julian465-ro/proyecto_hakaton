@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gestión de referidos</title>
+    <link href="style.css" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2>Gestión de referidos</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for referido in referidos %}
+                        <tr>
+                            <td>{{ (link unavailable) }}</td>
+                            <td>{{ referido.nombre }}</td>
+                            <td>{{ referido.correo }}</td>
+                            <td>{{ referido.telefono }}</td>
+                            <td>
+                                <a href="{{ url_for('editar_referido', id=(link unavailable)) }}"
+                                    class="btn btn-secondary">Editar</a>
+                                <a href="{{ url_for('eliminar_referido', id=(link unavailable)) }}"
+                                    class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <a href="{{ url_for('agregar_referido') }}" class="btn btn-primary">Agregar referido</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
